@@ -1,5 +1,6 @@
 plugins {
     java
+    war
     id("org.springframework.boot") version "3.2.0-SNAPSHOT"
     id("io.spring.dependency-management") version "1.1.3"
 }
@@ -35,6 +36,13 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+    // https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api
+    compileOnly("jakarta.servlet:jakarta.servlet-api")
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jsp-api
+    implementation("org.apache.tomcat:tomcat-jsp-api:11.0.0-M11")
+
+
+
 }
 
 tasks.withType<Test> {

@@ -26,7 +26,7 @@ public class AppContextConfig implements WebMvcConfigurer {
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 
         /*set the prefix*/
-        viewResolver.setPrefix("templates/");
+        viewResolver.setPrefix("/WEB-INF/views/");
 
         /*set the suffix*/
         viewResolver.setSuffix(".jsp");
